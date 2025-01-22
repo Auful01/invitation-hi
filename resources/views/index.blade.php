@@ -56,6 +56,11 @@
 
     .timer {
         margin-top: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap; /* Prevent wrapping */
+        gap: 10px; /* Add space between columns */
     }
 
     .timer-item {
@@ -63,6 +68,10 @@
         font-weight: 700;
         background-color: #fff;
         border-radius: 10px;
+        flex: 1;
+        min-width: 80px; /* Ensure a minimum width */
+        max-width: 300px; /* Set a maximum width */
+        text-align: center;
     }
 
     p {
@@ -131,6 +140,10 @@
             font-size: 2vw;
         }
 
+        .col-left{
+            height: 100vh; background: linear-gradient(180deg, #fff 35%, #0A4766 100%); display: flex; flex-direction: column; justify-content: center; align-items: center;border-right: #0A4766 2px
+        }
+
     }
 
     @media (max-width: 768px) {
@@ -164,6 +177,11 @@
         h1.symphony-1 {
             font-size: 40pt !important;
         }
+
+        .col-left{
+            height: 100vh; background: linear-gradient(180deg, #fff 35%, #8ea2ad 100%); display: flex; flex-direction: column; justify-content: center; align-items: center;
+        }
+
     }
 
     @media (max-width: 480px) {
@@ -213,30 +231,71 @@
 </style>
 <body>
 
+    <div class="row d-flex">
+        <div class="col p-0">
+            <div
+                class="col-left">
+            <!-- Logo -->
 
-    <div
-        style="height: 100vh; background: linear-gradient(180deg, #fff 50%, #0A4766 50%); display: flex; flex-direction: column; justify-content: center; align-items: center;">
-    <!-- Logo -->
-        <img
-            src="https://scontent.fmlg9-1.fna.fbcdn.net/v/t39.30808-6/277326574_4705323562910538_695077024932705016_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=QHNtTKSCkgUQ7kNvgFIWwRD&_nc_zt=23&_nc_ht=scontent.fmlg9-1.fna&_nc_gid=AFE2pvu4fpryge_5c9WLTGH&oh=00_AYDGbPIDSad3diebsNVLMWQ4hwB836-64IbE-hSVSbm7mA&oe=6795BC5D"
-            alt="Logo"
-            style="max-height: 150px; margin-top: -120px;padding-bottom: 50px;">
+            <!-- Header Content -->
+                <div
+                    class="header-1 "
+                    style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+                    <h1 class="m-0" style="font-size: 2rem;">UNDANGAN</h1>
+                    <p style="margin: 0; font-size: 1.5rem;">----------</p>
+                    <h1 class="symphony symphony-1 m-0">Wisuda <br> Santri</h1>
 
-    <!-- Header Content -->
-        <div
-            class="header-1 "
-            style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
-            <h1 class="m-0" style="font-size: 2rem;">UNDANGAN</h1>
-            <p style="margin: 0; font-size: 1.5rem;">----------</p>
-            <h1 class="symphony symphony-1 m-0">Wisuda <br> Santri</h1>
+                </div>
+
+
+                <p class="text-uppercase text-white mt-5">
+                    <b>
+                        Madrasah Diniyyah Salafiyah <br> Matholi'ul Huda
+                    </b>
+                </p>
+
+                <p class="text-uppercase text-white">
+                    <b>
+                        Pondok Pesantren Miftahul Huda
+                    </b>
+                </p>
+            </div>
+
+        </div>
+
+        <div class="col"  style="background: linear-gradient(to top, rgba(10, 71, 102), rgba(0, 0, 0, 0) 60%), url('{{asset('images/bgmasjid.jpg')}}'); background-size: cover; background-position: center;">
+            <div
+            style="height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <img
+                src="https://scontent.fmlg9-1.fna.fbcdn.net/v/t39.30808-6/277326574_4705323562910538_695077024932705016_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=QHNtTKSCkgUQ7kNvgFIWwRD&_nc_zt=23&_nc_ht=scontent.fmlg9-1.fna&_nc_gid=AFE2pvu4fpryge_5c9WLTGH&oh=00_AYDGbPIDSad3diebsNVLMWQ4hwB836-64IbE-hSVSbm7mA&oe=6795BC5D"
+                alt="Logo"
+                style="max-height: 150px; padding-bottom: 50px;">
+
+                <div class="text-white text-center">
+                    <p>
+                        Kepada Yth:
+                    </p>
+
+                    <div class="rounded-5" style="background: #fff; min-height: 200px; max-height:200px; min-width:400px; max-width:400px;">
+
+                    </div>
+
+
+                </div>
+                <p class="text-white">
+                    <b>
+                        Mohon maaf jika ada kesalahan penulisan nama atau gelar
+                    </b>
+                </p>
+            </div>
         </div>
     </div>
 
 
 
-    <div class="container" style="margin-top:80px;">
+    <div class="container" style="margin-top:150px;">
         <section>
-            <div class="card">
+            <div class="card border-0 shadow rounded-5">
                 <div class="card-body text-center">
                     <div class="my-5">
                         <b>
@@ -322,7 +381,7 @@
 
 
         <section>
-            <div class="card">
+            <div class="card border-0 shadow rounded-5">
                 <div class="card-body text-center">
 
                     <h1 class="symphony">Susunan Acara</h1>
@@ -412,7 +471,7 @@
             </div>
         </section>
 
-        <section class="text-center">
+        <div class="text-center" style="margin-bottom: 200px;">
             <div>
                 <img src="{{asset('images/mifda.png')}}" alt="" class="img-fluid" style="max-height: 200px;">
             </div>
@@ -425,30 +484,44 @@
                 </h1>
                 <h1>MIFTAHUL HUDA</h1> --}}
             </div>
-            <div class="timer row d-flex" style="color: #003f0c;">
-                <div class="col-md-3 mb-3 text-center">
+            <div class="timer  d-flex justify-content-between text-center mb-4" style="color: #003f0c;">
+                {{-- <div class="col-md-3 mb-3 text-center"> --}}
                     <div class="timer-item py-3 ">
                         <p class="m-0">Hari</p>
                         <span id="days">-</span>
                     </div>
-                </div>
-                <div class="col-md-3 mb-3 text-center">
+                {{-- </div> --}}
+                {{-- <div class="col-md-3 mb-3 text-center"> --}}
                     <div class="timer-item py-3">
                         <p class="m-0">Jam</p>
                         <span id="hours">-</span>
                     </div>
-                </div>
-                <div class="col-md-3 mb-3 text-center">
+                {{-- </div> --}}
+                {{-- <div class="col-md-3 mb-3 text-center"> --}}
                     <div class="timer-item py-3">
                         <p class="m-0">Menit</p>
                         <span id="minutes">-</span>
                     </div>
-                </div>
-                <div class="col-md-3 mb-3 text-center">
+                {{-- </div> --}}
+                {{-- <div class="col-md-3 mb-3 text-center"> --}}
                     <div class="timer-item py-3">
                         <p class="m-0">Detik</p>
                         <span id="seconds">-</span>
                     </div>
+                {{-- </div> --}}
+            </div>
+
+            <div class="card border-0 shadow rounded-4">
+                <div class="card-body">
+                    <p class="symphony " style="font-size: 40pt;">
+                        Quotes
+                    </p>
+                    <h1>
+                        "Nomer siji ngaji, Nomer loro sekolah, Insyaallah hasil karone"
+                    </h1>
+                    <p class="symphony" style="font-size: 30pt">
+                        - KH. Muhammad Yahya
+                    </p>
                 </div>
             </div>
 
@@ -464,7 +537,7 @@
                     10 Sya'ban 1446H
                 </h3>
             </div> --}}
-        </section>
+        </div>
 
         {{-- <section id="susunan-acara" >
             <div class="mb-5" style="margin-top: 100px;margin-bottom: 200px;">
@@ -502,7 +575,7 @@
         </section> --}}
 
 
-        <section style="padding-top: 200px;">
+        {{-- <section style="padding-top: 200px;">
 
             <div class="card">
                 <div class="card-body">
@@ -517,7 +590,7 @@
                     </p>
                 </div>
             </div>
-        </section>
+        </section> --}}
     </div>
 </body>
 
